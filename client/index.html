@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title></title>
+   
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="css/full-slider.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body ng-app='myApp'>
+	<div class="nav_bar">
+		<ul class="nav nav-tabs">
+		  <li role="presentation" class="active"><a href="#/">Home</a></li>
+		  <li role="presentation"><a href="#/register">Register</a></li>
+		  <li role="presentation"><a href="#/login">Login</a></li>
+		  <li role="presentation"><a href="#/posts">View Posts</a></li>
+		  <li role="presentation"><a href="#/single">SinglePost</a></li>
+		</ul>
+	<div ng-controller = 'LogoutCtrl' style='margin: 20px; float: right'>
+		<button ng-click = 'logout()' class="btn btn-default">Log Out</button>
+	<div ng-view="">
+	</div>
+</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+	<script src="app.module.js"></script>
+
+	<script src="auth/auth.service.js"></script>
+	<script src="auth/register.controller.js"></script>
+	<script src="auth/login.controller.js"></script>
+	<script src="auth/logout.controller.js"></script>
+
+
+					<!-- CONTENT -->
+	<script src="content/posts/post.service.js"></script>
+	<script src="content/posts/post.controller.js"></script>
+	<script src="content/comments/comment.controller.js"></script>
+	<script src="content/comments/comment.service.js"></script>
+
+
+
+</body>
+</html>
